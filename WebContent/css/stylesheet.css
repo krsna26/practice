@@ -1,0 +1,99 @@
+body {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	margin: 0px;
+	background-color: lavender;
+	cursor: default;
+}
+
+div#footer {
+	margin-left: 30%;
+	margin-right: 30%;
+	/*
+    border: #0c5460 solid 5px;
+    */
+	width: 40%;
+	text-align: center;
+}
+
+h2#ribbon {
+	background-color: #1b1e21;
+	color: White;
+	margin-top: 0px;
+	text-align: center;
+	padding: 5px;
+	margin-bottom: 0px;
+}
+
+p#contact-info {
+	font-size: 30px;
+	margin-top: 20px;
+	text-align: center;
+	position: center;
+	margin: auto;
+}
+
+p#callback-text {
+	font-size: 25px;
+	margin-top: 20px;
+	text-align: center;
+	position: center;
+}
+
+p#news {
+	margin-left: 30px;
+	margin-top: 20px;
+	/*    border: red dashed 5px;*/
+}
+
+p#weather {
+	margin-left: 30px;
+	margin-top: 20px;
+	border: green dashed 5px;
+}
+
+table#contact-form {
+	text-align: right;
+	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+td {
+	padding: 12px;
+	font-size: 25px;
+	text-align: right
+}
+
+select#ptype {
+	width: 260px;
+}
+
+div#footer2 {
+	margin-left: 35%;
+	margin-right: 35%;
+	width: 30%;
+	text-align: center;
+	align: center;
+	align-content: center;
+	/* border: #0c5460 solid 5px; */
+}
+
+#uid {
+	margin-top: 100px;
+	}
+
+table#con{
+	
+	margin-top: 300px;
+
+ 	position: center;
+	margin: auto;
+	
+}
+
+th{
+	font-size: 30px;
+	text-align: center;
+}
+

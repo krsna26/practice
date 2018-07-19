@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx">
+	<!-- This an spring mvc file,iske name ka pehla word servlet name aaega 
+		uske badd '-' example spring-servlet.xml -->
+
+
+	<context:component-scan
+		base-package="lti.lening.repo,lti.lening.service,lti.lening.ctrlr" />
+
+	<mvc:annotation-driven />
+
+	<!-- ========================================= URL Handler =========================================== -->
+	<bean
+		class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
+
+	<!-- ========================================= View Resolvers =========================================== -->
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver"> <!--use to differentiate btw html/pdf -->
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/" />
+		<property name="suffix" value=".jsp" /> <!-- jab bhi koi string return hogi uske aage '/' lagega aur end mein '.jsp' 
+			lagega -->
+	</bean>
+
+	<!-- ========================================= Exception handlers =========================================== -->
+
+	<bean id="exceptionMapping"
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="mappedHandlers">
+			<set>
+				<!-- <ref local="registerController" /> -->
+			</set>
+		</property>
+		<property name="exceptionMappings">
+			<props>
+				<prop key="NullPointer">unexpectedError</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
